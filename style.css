@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.board {
+    height: 200px;
+    width: 200px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+    border: 2px solid black;
+}
+
+.board div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.board div:hover {
+    box-shadow: inset 0 0 10px black;
+    cursor: pointer;
+}
+
+.used {
+    box-shadow: inset 0 0 10px black;
+    pointer-events: none;
+}
+
+dialog {
+  position: fixed;      
+  top: 50%;            
+  left: 50%;            
+  transform: translate(-50%, -50%);  
+  height: 200px;
+  width: 200px;
+}
+
+.modal-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+dialog::backdrop {
+    background: white;
+}
